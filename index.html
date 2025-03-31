@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorblind Mode Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="none">
+
+    <nav>
+        <div class="nav-container">
+            <div class="site-name">Forgotten</div>
+            <button onclick="toggleSettings()">Settings</button>
+        </div>
+    </nav>
+
+<body>
+</body>
+
+<div class="content" id="settings">
+    <h1>Settings</h1>
+    <h2>Colorblind Settings</h2>
+    <p>Click the buttons below to switch between different colorblind modes.</p>
+
+    <button onclick="setMode('none')">Normal Vision</button>
+    <button onclick="setMode('protanopia')">Protanopia</button>
+    <button onclick="setMode('deuteranopia')">Deuteranopia</button>
+    <button onclick="setMode('tritanopia')">Tritanopia</button>
+
+    <h2>Sound Settings</h2>
+    <p>Adjust volume or Mute/Unmute music and/or Sound effects</p>
+    <p>Music</p>
+
+    <input type="range" id="volume" min="0" max="100" value="50" oninput="adjustVolume(this.value)">
+    <span id="volume-label">50%</span>
+    <div class="sound-buttons">
+        <button onclick="playSound(Audio)">Play Song</button>
+        <button onclick="toggleMute()">Mute/Unmute</button>
+
+    <p>Sound Effects</p>
+    </div>
+
+    <audio id="audio-sample" loop src="/Users/tom/Desktop/House on the Hill - Everet Almond.mp3" preload="auto"></audio>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
